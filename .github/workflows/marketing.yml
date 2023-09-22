@@ -17,8 +17,11 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - run: npm install
-      - run: 
+        run: |
+          # Navigate up one directory level
           cd ..
+
+          # Run npm build command from the root directory
           npm run build
 
       - uses: shinyinc/action-aws-cli@v1.2
